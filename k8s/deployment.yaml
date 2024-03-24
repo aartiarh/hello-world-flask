@@ -15,13 +15,14 @@ spec:
     spec:
       containers:
       - name: hello-world-container
+        imagePullPolicy: Always
         image: aartiarh/test:latest
         ports:
         - containerPort: 80
         resources:
           requests:
             cpu: "100m"
-            memory: "256Mi"
+            memory: "128Mi"
           limits:
             cpu: "100m"
-            memory: "256Mi"
+            memory: "128Mi"

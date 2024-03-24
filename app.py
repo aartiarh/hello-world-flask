@@ -26,7 +26,12 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+@app.route('/dummy')
+def dummy():
+    for i in range(0,10000):
+        print(i)
 
+    return "dummy"
 @app.route('/prime/<int:n>')
 def prime(n):
     """Return a list of prime numbers up to n."""
